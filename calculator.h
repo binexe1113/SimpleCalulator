@@ -1,0 +1,3 @@
+double inputValidator();
+
+ int menuOptionValidator();
