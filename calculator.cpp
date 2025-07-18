@@ -60,14 +60,14 @@ int menuOptionValidator(){
     }
     for (int i =0;i<line.size();i++){
         if (isdigit(line[i]) == false){
-            cout<< "Please enter only numbers between 1 and 4"<<endl;
+            cout<< "Please enter only numbers between 1 and 5"<<endl;
             isAllDigits=false;
             break;
         }
     }
         if(isAllDigits==true){
-            if(stoi(line)>6){
-                cout<<"Please enter a number between 1 and 4"<<endl;
+            if(stoi(line)>5){
+                cout<<"Please enter a number between 1 and 5"<<endl;
                 continue;
             }
         }else{
@@ -79,4 +79,24 @@ int menuOptionValidator(){
     }while(isValid == false);
     return stoi(line);
     
+}
+
+double AddNum(double n1, double n2){
+    return(n1+n2);
+}
+
+double SubNum(double n1, double n2){
+    return(n1-n2);
+}
+
+double MulNum(double n1, double n2){
+    return(n1*n2);
+}
+
+double DivNum(double n1, double n2){
+    if (n2==0){
+        cout<<"Division by 0 FATAL ERROR"<<endl;
+        return 0;
+    }
+    return(n1/n2);
 }
